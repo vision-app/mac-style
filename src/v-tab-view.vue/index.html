@@ -1,0 +1,13 @@
+<div :class="$style.root">
+    <div :class="$style.head">
+        <div :class="$style.item"
+            v-for="($child, index) in $children"
+            :selected="selectedIndex === index"
+            @click="selectedIndex = index">
+            {{ $child.title }}
+        </div>
+    </div>
+    <div :class="$style.body">
+        <slot />
+    </div>
+</div>

@@ -1,0 +1,25 @@
+.root {
+    .head {
+        user-select: none;
+        cursor: default;
+        font-size: 12px;
+        background: $background-color-base;
+        border-bottom: 1px solid $border-color-base;
+    }
+
+    .item {
+        display: inline-block;
+        height: 27px;
+        line-height: 27px;
+        padding: 0 12px;
+    }
+
+    .item[selected] {
+        background: $brand-primary;
+        color: white;
+    }
+
+    .body {
+
+    }
+}
