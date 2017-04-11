@@ -1,1 +1,3 @@
-@import 'v-base.vue/global.css';
+@import 'u-base.vue/global.css';
+
+$brand-primary: #419BF9;

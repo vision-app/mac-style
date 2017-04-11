@@ -1,7 +1,7 @@
-import Base from 'v-base.vue';
+import Base from 'u-base.vue';
 
 const TabView = Base.extend({
-    name: 'v-tab-view',
+    name: 'u-tab-view',
     data() {
         return {
             selectedIndex: 0,

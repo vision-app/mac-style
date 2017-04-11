@@ -1,7 +1,7 @@
-import Base from 'v-base.vue';
+import Base from 'u-base.vue';
 
 const Panel = Base.extend({
-    name: 'v-panel',
+    name: 'u-panel',
     props: {
         title: String,
     },

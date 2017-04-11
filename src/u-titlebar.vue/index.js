@@ -1,7 +1,7 @@
-import Base from 'v-base.vue';
+import Base from 'u-base.vue';
 
 const Titlebar = Base.extend({
-    name: 'v-titlebar',
+    name: 'u-titlebar',
     props: {
         title: String,
     }

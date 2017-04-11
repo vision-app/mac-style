@@ -1,7 +1,7 @@
-import Base from 'v-base.vue';
+import Base from 'u-base.vue';
 
 const ColorPicker = Base.extend({
-    name: 'v-color-picker',
+    name: 'u-color-picker',
     props: {
         color: {
             type: String,

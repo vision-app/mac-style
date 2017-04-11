@@ -1,7 +1,7 @@
-import Base from 'v-base.vue';
+import Base from 'u-base.vue';
 
 const TabViewItem = Base.extend({
-    name: 'v-tab-view-item',
+    name: 'u-tab-view-item',
     props: {
         title: String,
     },
