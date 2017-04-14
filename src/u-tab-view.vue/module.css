@@ -1,25 +1,51 @@
+@import 'u-tabs.vue/module.css';
+
 .root {
     .head {
-        user-select: none;
-        cursor: default;
-        font-size: 12px;
         background: $background-color-base;
-        border-bottom: 1px solid $border-color-base;
     }
 
     .item {
-        display: inline-block;
-        height: 27px;
-        line-height: 27px;
-        padding: 0 12px;
+        position: relative;
+        border-top: none;
+        margin-left: -1px;
+        padding: 0 30px;
+        height: 24px;
+        line-height: 24px;
     }
 
     .item[selected] {
-        background: $brand-primary;
-        color: white;
+        color: inherit;
     }
 
-    .body {
+    .close {
+        display: none;
+        position: absolute;
+        left: 4px;
+        top: 4px;
+        width: 16px;
+        height: 16px;
+        line-height: 16px;
+        text-align: center;
+        color: #666;
+        border-radius: 2px;
 
+        &:before {
+            content: '✕';
+        }
+    }
+
+    .close:hover {
+        background: $gray-base;
+    }
+
+    .close:active {
+        background: $gray-dark;
+    }
+
+    .item:hover {
+        .close {
+            display: block;
+        }
     }
 }

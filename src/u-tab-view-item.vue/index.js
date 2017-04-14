@@ -1,20 +1,7 @@
-import Base from 'u-base.vue';
+import Tab from 'u-tab.vue';
 
-const TabViewItem = Base.extend({
+const TabViewItem = Tab.extend({
     name: 'u-tab-view-item',
-    props: {
-        title: String,
-    },
-    computed: {
-        visible() {
-            /**
-             * @QUESTION
-             * Using `$parent.selectedItem === this` in template has no effect.
-             * Check whether it is a bug of Vue.
-             */
-            return this.$parent.selectedItem === this;
-        },
-    },
 });
 
 export default TabViewItem;

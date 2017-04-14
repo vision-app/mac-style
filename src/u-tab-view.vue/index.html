@@ -1,13 +1,16 @@
-<div :class="$style.root">
-    <div :class="$style.head">
-        <div :class="$style.item"
-            v-for="($child, index) in $children"
-            :selected="selectedIndex === index"
-            @click="selectedIndex = index">
-            {{ $child.title }}
-        </div>
-    </div>
+<div :class="$style.root" :disabled="disabled">
+    <ul :class="$style.head">
+        <li :class="$style.item"
+            v-for="(tab, index) in tabs"
+            :title="tab.title"
+            :selected="selectedIndex_ === index"
+            :disabled="tab.disabled"
+            v-show="!tab.hidden"
+            @click="select(index)">
+            <div :class="$style.close" @click.stop="remove(tab)"></div> {{ tab.title }}
+        </li>
+    </ul>
     <div :class="$style.body">
-        <slot />
+        <slot></slot>
     </div>
 </div>

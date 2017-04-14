@@ -1,17 +1,7 @@
-import Base from 'u-base.vue';
+import Tabs from 'u-tabs.vue';
 
-const TabView = Base.extend({
+const TabView = Tabs.extend({
     name: 'u-tab-view',
-    data() {
-        return {
-            selectedIndex: 0,
-        }
-    },
-    computed: {
-        selectedItem() {
-            return this.$children[this.selectedIndex];
-        },
-    },
 });
 
 export default TabView;
