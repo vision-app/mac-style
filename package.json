@@ -26,7 +26,9 @@
       "u-base.vue": "^0.1.0",
       "u-button.vue": "^0.1.0",
       "u-tabs.vue": "^0.1.0",
-      "u-tab.vue": "^0.1.0"
+      "u-tab.vue": "^0.1.0",
+      "u-list-view.vue": "^0.1.0",
+      "u-list-view-item.vue": "^0.1.0"
   },
   "devDependencies": {
     "eslint": "^3.18.0",

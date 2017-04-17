@@ -1,13 +1,11 @@
 <div :class="$style.root">
     <div :class="$style.head">
-        <slot name="head">
-            {{ title }}
-        </slot>
+        <slot name="head">{{ title }}</slot>
     </div>
     <div :class="$style.body">
-        <slot />
+        <slot></slot>
     </div>
     <div :class="$style.foot">
-        <slot name="foot" />
+        <slot name="foot"></slot>
     </div>
 </div>
