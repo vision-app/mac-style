@@ -1,29 +1,36 @@
-.root {
-    .head {
-        background: $background-color-base;
-    }
+.head {
+    background: $background-color-base;
+}
 
-    .item {
-        box-sizing: border-box;
-        margin: 0;
-        border: none;
+.item {
+    box-sizing: border-box;
+    margin: 0;
+    border: none;
 
-        border-left: 1px solid $border-color-base;
-        border-right: 1px solid $border-color-base;
-        margin-left: -1px;
-        height: 28px;
-        line-height: 28px;
-    }
+    border-left: 1px solid $border-color-base;
+    border-right: 1px solid $border-color-base;
+    margin-left: -1px;
+    height: 28px;
+    line-height: 28px;
+}
 
-    .item:active {
-        background: $gray-base;
-    }
+.item:active {
+    background: $gray-base;
+}
 
-    .item[selected] {
-        position: relative;
-        padding-bottom: 0;
-        border-color: #357AC8;
-        background: $brand-primary;
-        color: white;
-    }
+.item[selected] {
+    position: relative;
+    padding-bottom: 0;
+    border-color: #357AC8;
+    background: $brand-primary;
+    color: white;
+}
+
+.item[disabled] {
+    background: none;
+}
+
+.item[selected][disabled] {
+    background: none;
+    border-color: $border-color-base;
 }

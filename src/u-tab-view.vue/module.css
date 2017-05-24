@@ -1,51 +1,51 @@
 @import 'u-tabs.vue/module.css';
 
-.root {
-    .head {
-        background: $background-color-base;
-    }
+.root {}
 
-    .item {
-        position: relative;
-        border-top: none;
-        margin-left: -1px;
-        padding: 0 30px;
-        height: 24px;
-        line-height: 24px;
-    }
+.head {
+    background: $background-color-base;
+}
 
-    .item[selected] {
-        color: inherit;
-    }
+.item {
+    position: relative;
+    border-top: none;
+    margin-left: -1px;
+    padding: 0 30px;
+    height: 24px;
+    line-height: 24px;
+}
 
+.item[selected] {
+    color: inherit;
+}
+
+.close {
+    display: none;
+    position: absolute;
+    left: 4px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #666;
+    border-radius: 2px;
+
+    &:before {
+        content: '✕';
+    }
+}
+
+.close:hover {
+    background: $gray-base;
+}
+
+.close:active {
+    background: $gray-dark;
+}
+
+.item:hover {
     .close {
-        display: none;
-        position: absolute;
-        left: 4px;
-        top: 4px;
-        width: 16px;
-        height: 16px;
-        line-height: 16px;
-        text-align: center;
-        color: #666;
-        border-radius: 2px;
-
-        &:before {
-            content: '✕';
-        }
-    }
-
-    .close:hover {
-        background: $gray-base;
-    }
-
-    .close:active {
-        background: $gray-dark;
-    }
-
-    .item:hover {
-        .close {
-            display: block;
-        }
+        display: block;
     }
 }

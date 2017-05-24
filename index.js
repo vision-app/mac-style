@@ -5,7 +5,9 @@ import Button from './src/u-button.vue';
 import Tabs from './src/u-tabs.vue';
 import Tab from 'u-tab.vue';
 import ListView from 'u-list-view.vue';
-import ListViewItem from 'u-list-view-item.vue';
+import ListViewItem from './src/u-list-view-item.vue';
+import TreeView from 'u-tree-view.vue';
+import TreeViewNode from './src/u-tree-view-node.vue';
 import Titlebar from './src/u-titlebar.vue';
 import TabView from './src/u-tab-view.vue';
 import TabViewItem from './src/u-tab-view-item.vue';
@@ -19,6 +21,8 @@ const Components = {
     Tab,
     ListView,
     ListViewItem,
+    TreeView,
+    TreeViewNode,
     Titlebar,
     TabView,
     TabViewItem,
@@ -36,6 +40,8 @@ export {
     Tab,
     ListView,
     ListViewItem,
+    TreeView,
+    TreeViewNode,
     Titlebar,
     TabView,
     TabViewItem,

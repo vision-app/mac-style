@@ -1,0 +1,9 @@
+.expander {
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+}
+
+.text {
+    padding: 0;
+}

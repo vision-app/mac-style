@@ -6,12 +6,12 @@
     border-bottom: 1px solid #acaaac;
     background-image: linear-gradient(to bottom, #e9e7e9, #d2d0d2);
     color: #3b393b;
+}
 
-    .title {
-        font-size: 13px;
-        line-height: 22px;
-        text-align: center;
-    }
+.title {
+    font-size: 13px;
+    line-height: 22px;
+    text-align: center;
 }
 
 /*#f5f4f5 #eeedee #e9e7e9, #d2d0d2 #c3c1c3 #acaaac*/
