@@ -35,3 +35,11 @@
     background: none;
     border-color: $border-color-base;
 }
+
+.item:first-child {
+    border-left: 0;
+}
+
+.body {
+    padding: 0;
+}
