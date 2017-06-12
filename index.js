@@ -12,6 +12,7 @@ import Titlebar from './src/u-titlebar.vue';
 import TabView from './src/u-tab-view.vue';
 import TabViewItem from './src/u-tab-view-item.vue';
 import Panel from './src/u-panel.vue';
+import Pallette from './src/u-pallette.vue';
 import ColorPicker from './src/u-color-picker.vue';
 
 const Components = {
@@ -27,6 +28,7 @@ const Components = {
     TabView,
     TabViewItem,
     Panel,
+    Pallette,
     ColorPicker,
 };
 
@@ -46,5 +48,6 @@ export {
     TabView,
     TabViewItem,
     Panel,
+    Pallette,
     ColorPicker,
 };

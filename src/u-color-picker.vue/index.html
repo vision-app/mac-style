@@ -1,3 +1,8 @@
+
+    <!-- <span :class="$style.color" :style="{ backgroundColor: color }"></span> -->
 <div :class="$style.root">
-    <div :class="$style.color" :style="{ backgroundColor: color }">&nbsp;</div>
+    <div :class="$style.wrapper">
+        <input type="color" :class="$style.color" :value="color_" @change="onChange">
+    </div>
+    <!-- <span>{{ color_ }}</span> -->
 </div>

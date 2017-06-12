@@ -1,0 +1,17 @@
+<div :class="$style.root">
+    <div :class="$style.SV">
+        <div :class="$style.SV_handle" style="left: 100px; top: 100px;"></div>
+    </div>
+    <div :class="$style.middle">
+        <div :class="$style.color" :style="{ backgroundColor: color_ }"></div>
+        <div :class="$style.bars">
+            <div :class="$style.H">
+                <div :class="$style.H_handle"></div>
+            </div>
+            <div :class="$style.A" :style="{ backgroundImage: `linear-gradient(to right, rgba(${r}, ${g}, ${b}, 0), ${color_})` }">
+                <div :class="$style.H_handle"></div>
+            </div>
+        </div>
+    </div>
+    <input :class="$style.input" :value="color_">
+</div>
