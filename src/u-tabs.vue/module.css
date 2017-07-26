@@ -1,3 +1,5 @@
+@import 'u-tabs.vue/module.css';
+
 .head {
     background: $background-color-base;
     border-top: 1px solid $border-color-base;

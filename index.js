@@ -1,5 +1,7 @@
 import Vue from 'vue';
 
+import './src/u-base.vue/base.css';
+
 import Base from './src/u-base.vue';
 import Button from './src/u-button.vue';
 import Tabs from './src/u-tabs.vue';
