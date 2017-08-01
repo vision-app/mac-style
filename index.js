@@ -1,7 +1,4 @@
-import Vue from 'vue';
-
 import './src/u-base.vue/base.css';
-
 import Base from './src/u-base.vue';
 import Button from './src/u-button.vue';
 import Tabs from './src/u-tabs.vue';
@@ -34,9 +31,6 @@ const Components = {
     ColorPicker,
 };
 
-window.Vue = Vue;
-Object.keys(Components).forEach((key) => Vue.component(Components[key].options.name, Components[key]));
-
 export {
     Base,
     Button,
@@ -53,3 +47,11 @@ export {
     Pallette,
     ColorPicker,
 };
+
+const Library = {
+    install(Vue) {
+        Object.keys(Components).forEach((key) => Vue.component(Components[key].options.name, Components[key]));
+    },
+};
+
+export default Library;
