@@ -1,7 +1,6 @@
 import Tabs from 'u-tabs.vue';
 
-const TabView = Tabs.extend({
+export default {
     name: 'u-tab-view',
-});
-
-export default TabView;
+    mixins: [Tabs],
+};

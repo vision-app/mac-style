@@ -50,7 +50,7 @@ export {
 
 const Library = {
     install(Vue) {
-        Object.keys(Components).forEach((key) => Vue.component(Components[key].options.name, Components[key]));
+        Object.keys(Components).forEach((key) => Vue.component(Components[key].name, Components[key]));
     },
 };
 

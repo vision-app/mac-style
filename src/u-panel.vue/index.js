@@ -1,10 +1,6 @@
-import Base from 'u-base.vue';
-
-const Panel = Base.extend({
+export default {
     name: 'u-panel',
     props: {
         title: String,
     },
-});
-
-export default Panel;
+};

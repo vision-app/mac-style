@@ -1,6 +1,4 @@
-import Base from 'u-base.vue';
-
-const ColorPicker = Base.extend({
+export default {
     name: 'u-color-picker',
     props: {
         color: {
@@ -33,6 +31,4 @@ const ColorPicker = Base.extend({
             });
         },
     },
-});
-
-export default ColorPicker;
+};

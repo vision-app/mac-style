@@ -1,6 +1,4 @@
-import Base from 'u-base.vue';
-
-const Pallette = Base.extend({
+export default {
     name: 'u-pallette',
     props: {
         color: {
@@ -33,6 +31,4 @@ const Pallette = Base.extend({
             }
         },
     },
-});
-
-export default Pallette;
+};

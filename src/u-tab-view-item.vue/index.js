@@ -1,7 +1,6 @@
 import Tab from 'u-tab.vue';
 
-const TabViewItem = Tab.extend({
+export default {
     name: 'u-tab-view-item',
-});
-
-export default TabViewItem;
+    mixins: [Tab],
+};
