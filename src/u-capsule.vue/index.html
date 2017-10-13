@@ -1,0 +1,8 @@
+<li :class="$style.root">
+    <div :class="$style.button"
+        :selected="selected || currentSelected"
+        :readonly="parentVM.readonly"
+        :disabled="disabled || parentVM.disabled"
+        @click="select()"><slot></slot></div>
+    <div :class="$style.title">{{ title }}</div>
+</li>

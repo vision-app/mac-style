@@ -6,11 +6,12 @@
     border-bottom: 1px solid #acaaac;
     background-image: linear-gradient(to bottom, #e9e7e9, #d2d0d2);
     color: #3b393b;
+    padding: 0 8px;
 }
 
 .title {
     font-size: 13px;
-    line-height: 22px;
+    line-height: 24px;
     text-align: center;
 }
 

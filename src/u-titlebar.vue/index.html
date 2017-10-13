@@ -1,4 +1,6 @@
 <div :class="$style.root">
     <div :class="$style.title">{{ title }}</div>
-    <slot />
+    <div :class="$style.body">
+        <slot></slot>
+    </div>
 </div>

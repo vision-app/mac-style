@@ -14,7 +14,7 @@
 ### Selected Index
 
 ``` html
-<u-tab-view :selected-index="2">
+<u-tab-view :index="2">
     <u-tab-view-item title="TabA">ContentA</u-tab-view-item>
     <u-tab-view-item title="TabB">ContentB</u-tab-view-item>
     <u-tab-view-item title="TabC">ContentC</u-tab-view-item>
@@ -44,7 +44,7 @@
 ### Hidden
 
 ``` html
-<u-tab-view :selected-index="2">
+<u-tab-view :index="2">
     <u-tab-view-item title="TabA">ContentA</u-tab-view-item>
     <u-tab-view-item title="TabB" hidden>ContentB</u-tab-view-item>
     <u-tab-view-item title="TabC">ContentC</u-tab-view-item>

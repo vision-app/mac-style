@@ -26,18 +26,19 @@
     "mac-style"
   ],
   "dependencies": {
-    "u-base.vue": "~0.2.0",
-    "u-button.vue": "~0.2.0",
-    "u-tabs.vue": "~0.2.0",
-    "u-tab.vue": "~0.2.0",
-    "u-list-view.vue": "~0.2.0",
-    "u-list-view-item.vue": "~0.2.0",
-    "u-tree-view.vue": "~0.2.0",
-    "u-tree-view-node.vue": "~0.2.0"
+    "u-base.vue": "~0.2.2",
+    "u-button.vue": "~0.2.2",
+    "u-linear-layout.vue": "^0.1.2",
+    "u-list-view-item.vue": "~0.2.6",
+    "u-list-view.vue": "~0.2.6",
+    "u-tab.vue": "~0.3.3",
+    "u-tabs.vue": "~0.3.3",
+    "u-tree-view-node.vue": "~0.2.6",
+    "u-tree-view.vue": "~0.2.6"
   },
   "devDependencies": {
     "eslint": "^4.3.0",
-    "eslint-config-vusion": "^1.2.0",
+    "eslint-config-vusion": "^1.2.2",
     "husky": "^0.13.3",
     "vue": "^2.4.0",
     "vusion-hooks": "^0.1.0"
