@@ -1,0 +1,44 @@
+.root {
+    flex: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.root[expanded] {
+    flex: auto;
+}
+
+.head {
+    flex: none;
+    /* margin-top: -1px; */
+    background: $background-color-base;
+    border-top: 1px solid $border-color-base;
+    border-bottom: 1px solid $border-color-base;
+    user-select: none;
+    cursor: $cursor-pointer;
+    line-height: 24px;
+}
+
+.head:before {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+    content: '▸';
+}
+
+.head[expanded]:before {
+    content: '▾';
+}
+
+.root + .root .head {
+    border-top: none;
+}
+
+.body {
+    flex: auto;
+    overflow: auto;
+    border-bottom: 1px solid $border-color-base;
+}

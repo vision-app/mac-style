@@ -1,0 +1,6 @@
+<div :class="$style.root" :expanded="currentExpanded">
+    <div :class="$style.head" @click="toggle()" :expanded="currentExpanded">{{ title }}</div>
+    <div :class="$style.body" v-show="currentExpanded">
+        <slot></slot>
+    </div>
+</div>
