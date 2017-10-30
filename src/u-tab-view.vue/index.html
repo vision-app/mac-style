@@ -7,7 +7,7 @@
             :disabled="tabVM.disabled || disabled"
             v-show="!tabVM.hidden"
             @click="select(index)">
-            <div :class="$style.close" @click.stop="remove(tabVM)"></div> {{ tabVM.title }}
+            <div :class="$style.close" @click.stop="close(index)"></div> {{ tabVM.title }}
         </li>
     </ul>
     <div :class="$style.body">
