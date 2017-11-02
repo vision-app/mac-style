@@ -3,7 +3,16 @@
 .expander {
     width: 20px;
     height: 20px;
-    line-height: 18px;
+    color: #6e6e6e;
+    font: 10px/20px "Hiragino Sans GB", sans-serif;
+}
+
+.expander:before {
+    content: '▶︎';
+}
+
+.expander[expanded]:before {
+    content: '▼';
 }
 
 .text {

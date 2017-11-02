@@ -26,8 +26,11 @@
     "mac-style"
   ],
   "dependencies": {
+    "circular-json-es6": "^2.0.1",
+    "safer-eval": "^1.2.2",
     "u-base.vue": "~0.2.2",
     "u-button.vue": "~0.2.2",
+    "u-emitter.vue": "^0.1.1",
     "u-linear-layout.vue": "^0.1.2",
     "u-link.vue": "^0.2.3",
     "u-list-view-item.vue": "~0.2.6",

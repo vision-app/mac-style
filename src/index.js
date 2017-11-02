@@ -6,6 +6,8 @@ import Capsule from './u-capsule.vue';
 import ColorPicker from './u-color-picker.vue';
 import Collapse from './u-collapse.vue';
 import CollapseItem from './u-collapse-item.vue';
+import DataView from './u-data-view.vue';
+import DataViewNode from './u-data-view-node.vue';
 import LinearLayout from './u-linear-layout.vue';
 import Link from './u-link.vue';
 import ListView from 'u-list-view.vue';
@@ -29,6 +31,8 @@ export {
     Collapse,
     CollapseItem,
     ColorPicker,
+    DataView,
+    DataViewNode,
     LinearLayout,
     Link,
     ListView,

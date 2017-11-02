@@ -1,16 +1,16 @@
 .root {
-    flex: none;
+    /* flex: none; */
     overflow: hidden;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
 }
 
 .root[expanded] {
-    flex: auto;
+    /* flex: auto; */
 }
 
 .head {
-    flex: none;
+    /* flex: none; */
     /* margin-top: -1px; */
     background: $background-color-base;
     border-top: 1px solid $border-color-base;
@@ -24,13 +24,14 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    line-height: 18px;
     text-align: center;
-    content: '▸';
+    color: #6e6e6e;
+    font: 10px/20px "Hiragino Sans GB", sans-serif;
+    content: '▶︎';
 }
 
 .head[expanded]:before {
-    content: '▾';
+    content: '▼';
 }
 
 .root + .root .head {
@@ -38,7 +39,7 @@
 }
 
 .body {
-    flex: auto;
+    /* flex: auto; */
     overflow: auto;
     border-bottom: 1px solid $border-color-base;
 }
