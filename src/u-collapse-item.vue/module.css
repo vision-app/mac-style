@@ -18,6 +18,7 @@
     user-select: none;
     cursor: $cursor-pointer;
     line-height: 24px;
+    overflow: hidden;
 }
 
 .head:before {
@@ -36,6 +37,11 @@
 
 .root + .root .head {
     border-top: none;
+}
+
+.extra {
+    float: right;
+    line-height: 0;
 }
 
 .body {

@@ -4,6 +4,27 @@
     background: $background-color-base;
     border-top: 1px solid $border-color-base;
     height: 26px;
+    border-left: 1px solid $border-color-base;
+    border-right: 1px solid $border-color-base;
+    margin-left: -1px;
+    margin-right: -1px;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.head::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+    background: none;
+}
+
+.head::-webkit-scrollbar-track {
+    background: white;
+}
+
+.head::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
 }
 
 .item {
@@ -16,8 +37,17 @@
     border-color: $border-color-base;
 }
 
+.item:first-of-type {
+    border-left: none;
+}
+
+/* .item:last-of-type {
+    border-right: none;
+} */
+
 .item[selected] {
     color: inherit;
+    padding-bottom: 0;
 }
 
 .close {
@@ -31,10 +61,10 @@
     text-align: center;
     color: #666;
     border-radius: 2px;
+}
 
-    &:before {
-        content: '✕';
-    }
+.close:before {
+    content: '✕';
 }
 
 .close:hover {
