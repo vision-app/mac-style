@@ -27,29 +27,20 @@
   ],
   "dependencies": {
     "circular-json-es6": "^2.0.1",
-    "safer-eval": "^1.2.2",
-    "u-base.vue": "~0.2.2",
-    "u-button.vue": "~0.2.2",
-    "u-emitter.vue": "^0.1.1",
-    "u-linear-layout.vue": "^0.1.2",
-    "u-link.vue": "^0.2.3",
-    "u-list-view-item.vue": "~0.2.6",
-    "u-list-view.vue": "~0.2.6",
-    "u-tab.vue": "~0.4.0",
-    "u-tabs.vue": "~0.4.0",
-    "u-tree-view-node.vue": "~0.2.7",
-    "u-tree-view-text.vue": "~0.2.7",
-    "u-tree-view.vue": "~0.2.7"
+    "proto-ui.vusion": "~0.2.1",
+    "safer-eval": "^1.2.2"
   },
   "devDependencies": {
-    "eslint": "^4.3.0",
-    "eslint-config-vusion": "^1.2.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.13.1",
+    "eslint-config-vusion": "^2.0.1",
     "husky": "^0.13.3",
-    "vue": "^2.4.0",
+    "vue": "^2.5.0",
     "vusion-hooks": "^0.1.0"
   },
   "peerDependencies": {
-    "vue": "^2.4.0"
+    "vue": "^2.5.0"
   },
   "vusion": {
     "type": "library"

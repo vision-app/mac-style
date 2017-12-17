@@ -1,8 +1,9 @@
-@import 'u-tree-view-node.vue/module.css';
+@import 'proto-ui.vusion/src/u-tree-view-node.vue/module.css';
 
 .expander {
     width: 20px;
-    height: 20px;
+    height: 100%;
+    vertical-align: middle;
     color: #6e6e6e;
     font: 10px/20px "Hiragino Sans GB", sans-serif;
 }
@@ -13,6 +14,13 @@
 
 .expander[expanded]:before {
     content: '▼';
+}
+
+.expander:after {
+    display: inline-block;
+    content: '';
+    height: 100%;
+    vertical-align: middle;
 }
 
 .text {
