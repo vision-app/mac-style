@@ -39,6 +39,7 @@ export {
 };
 
 export {
+    CollapseTransition,
     ListView,
     Tab,
     TreeView,
