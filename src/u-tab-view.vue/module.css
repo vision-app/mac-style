@@ -68,11 +68,11 @@
 }
 
 .close:hover {
-    background: $gray-base;
+    background: $gray-lighter;
 }
 
 .close:active {
-    background: $gray-dark;
+    background: $gray-light;
 }
 
 .item:hover .close {

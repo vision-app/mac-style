@@ -1,9 +1,4 @@
-.root {
-    /* flex: none; */
-    overflow: hidden;
-    /* display: flex; */
-    flex-direction: column;
-}
+@import 'proto-ui.vusion/src/u-list-view-group.vue/module.css';
 
 .head {
     background: $background-color-base;
@@ -15,11 +10,17 @@
     overflow: hidden;
 }
 
+.title {
+    display: inline-block;
+}
+
 .expander {
+    position: static;
     float: left;
     display: inline-block;
     width: 20px;
     height: 20px;
+    line-height: 1;
     text-align: center;
 }
 
@@ -37,14 +38,7 @@
     color: $brand-disabled;
 }
 
-.extra {
-    float: right;
-    line-height: 0;
-}
-
 .body {
-    /* flex: auto; */
-    overflow: auto;
     border-bottom: 1px solid $border-color-base;
 }
 

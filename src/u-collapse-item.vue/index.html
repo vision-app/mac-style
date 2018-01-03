@@ -1,6 +1,7 @@
 <div :class="$style.root" :expanded="currentExpanded">
-    <div :class="$style.head" @click="toggle()" :expanded="currentExpanded">
+    <div :class="$style.head" @click="toggle()">
         <span>{{ title }}</span>
+        <span :class="$style.expander" :expanded="currentExpanded"></span>
         <span :class="$style.extra"><slot name="extra"></slot></span>
     </div>
     <div :class="$style.body" v-show="currentExpanded">
