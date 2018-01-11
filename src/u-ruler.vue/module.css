@@ -1,0 +1,98 @@
+$size: 20px;
+$border: 1px solid $gray-dark;
+
+.root {
+    position: relative;
+    border-left: $border;
+    border-top: $border;
+}
+
+.axis-x {
+    position: absolute;
+    overflow: hidden;
+    left: calc($size - 1px);
+    top: 0;
+    height: $size;
+    width: calc(100% - $size + 1px);
+    border-bottom: $border;
+    background: white;
+}
+
+.axis-y {
+    position: absolute;
+    overflow: hidden;
+    left: 0;
+    top: calc($size - 1px);
+    width: $size;
+    height: calc(100% - $size + 1px);
+    border-right: $border;
+    background: white;
+}
+
+.corner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: $size;
+    height: $size;
+    background: white;
+    border-right: $border;
+    border-bottom: $border;
+}
+
+.scale-x {
+    position: absolute;
+    bottom: 0;
+    height: 5px;
+    border-left: $border;
+}
+
+.scale-x[size="large"] {
+    height: 8px;
+}
+
+.scale-x[size="full"] {
+    height: $size;
+}
+
+.scale-y {
+    position: absolute;
+    right: 0;
+    width: 5px;
+    border-top: $border;
+}
+
+.scale-y[size="large"] {
+    width: 8px;
+}
+
+.scale-y[size="full"] {
+    width: $size;
+}
+
+.number-x {
+    font-size: 10px;
+    margin-left: 2px;
+}
+
+.number-y {
+    font-size: 10px;
+    writing-mode: vertical-lr;
+    margin-top: 2px;
+}
+
+.corner {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: $size;
+    width: $size;
+}
+
+.body {
+    position: relative;
+    margin-left: $size;
+    margin-top: $size;
+    width: calc(100% - $size);
+    height: calc(100% - $size);
+}

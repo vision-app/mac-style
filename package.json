@@ -27,7 +27,7 @@
   ],
   "dependencies": {
     "circular-json-es6": "^2.0.1",
-    "proto-ui.vusion": "~0.2.1",
+    "proto-ui.vusion": "~0.2.3",
     "safer-eval": "^1.2.2"
   },
   "devDependencies": {

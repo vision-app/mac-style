@@ -1,0 +1,16 @@
+<div :class="$style.root" :style="{ width: width + 21 + 'px', height: height + 21 + 'px' }">
+    <div :class="$style['axis-x']">
+        <div :class="$style['scale-x']" v-for="scale in scalesX" :key="scale"
+            :size="getSize(scale)" :style="{ left: scale + 'px' }"
+        ><span :class="$style['number-x']" v-if="getSize(scale) === 'full'">{{ scale }}</span></div>
+    </div>
+    <div :class="$style['axis-y']">
+        <div :class="$style['scale-y']" v-for="scale in scalesY" :key="scale"
+            :size="getSize(scale)" :style="{ top: scale + 'px' }"
+        ><span :class="$style['number-y']" v-if="getSize(scale) === 'full'">{{ scale }}</span></div>
+    </div>
+    <div :class="$style.corner"></div>
+    <div :class="$style.body">
+        <slot></slot>
+    </div>
+</div>

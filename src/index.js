@@ -13,6 +13,7 @@ import ListViewGroup from './u-list-view-group.vue';
 import ListViewItem from './u-list-view-item.vue';
 import Pallette from './u-pallette.vue';
 import Panel from './u-panel.vue';
+import Ruler from './u-ruler.vue';
 import TabView from './u-tab-view.vue';
 import TabViewItem from './u-tab-view-item.vue';
 import Tabs from './u-tabs.vue';
@@ -35,6 +36,7 @@ export {
     ListViewItem,
     Pallette,
     Panel,
+    Ruler,
     TabView,
     TabViewItem,
     Tabs,
@@ -48,4 +50,5 @@ export {
     Tab,
     TreeView,
     TreeViewText,
+    Render,
 } from 'proto-ui.vusion';
