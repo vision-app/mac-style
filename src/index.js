@@ -14,6 +14,7 @@ import ListViewItem from './u-list-view-item.vue';
 import Pallette from './u-pallette.vue';
 import Panel from './u-panel.vue';
 import Ruler from './u-ruler.vue';
+import Slider from './u-slider.vue';
 import TabView from './u-tab-view.vue';
 import TabViewItem from './u-tab-view-item.vue';
 import Tabs from './u-tabs.vue';
@@ -37,6 +38,7 @@ export {
     Pallette,
     Panel,
     Ruler,
+    Slider,
     TabView,
     TabViewItem,
     Tabs,
@@ -51,4 +53,10 @@ export {
     TreeView,
     TreeViewText,
     Render,
+    Draggable,
+    Droppable,
+    Dragger,
+    GridLayout,
+    GridLayoutRow,
+    GridLayoutColumn,
 } from 'proto-ui.vusion';
