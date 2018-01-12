@@ -1,10 +1,1 @@
-@import 'proto-ui.vusion/src/base/global.css';
-
-$brand-primary: #419bf9;
-$border-color-base: #c5c5c5;
-$color-base: #252525;
-
-$margin-right-base: 0;
-$margin-bottom-base: 0;
-
-$cursor-pointer: default;
+@import './src/base/global.css';
