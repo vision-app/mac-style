@@ -8,6 +8,7 @@ import ComboSlider from './u-combo-slider.vue';
 import DataView from './u-data-view.vue';
 import DataViewNode from './u-data-view-node.vue';
 import Input from './u-input.vue';
+import Label from './u-label.vue';
 import LinearLayout from './u-linear-layout.vue';
 import Link from './u-link.vue';
 import ListView from './u-list-view.vue';
@@ -15,6 +16,7 @@ import ListViewGroup from './u-list-view-group.vue';
 import ListViewItem from './u-list-view-item.vue';
 import NumberInput from './u-number-input.vue';
 import Pallette from './u-pallette.vue';
+import PalletteSlider from './u-pallette-slider.vue';
 import Panel from './u-panel.vue';
 import Ruler from './u-ruler.vue';
 import Slider from './u-slider.vue';
@@ -35,6 +37,7 @@ export {
     DataView,
     DataViewNode,
     Input,
+    Label,
     LinearLayout,
     Link,
     ListView,
@@ -42,6 +45,7 @@ export {
     ListViewItem,
     NumberInput,
     Pallette,
+    PalletteSlider,
     Panel,
     Ruler,
     Slider,

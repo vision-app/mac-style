@@ -1,17 +1,30 @@
 <div :class="$style.root">
-    <div :class="$style.SV">
-        <div :class="$style.SV_handle" style="left: 100px; top: 100px;"></div>
-    </div>
-    <div :class="$style.middle">
-        <div :class="$style.color" :style="{ backgroundColor: color_ }"></div>
-        <div :class="$style.bars">
-            <div :class="$style.H">
-                <div :class="$style.H_handle"></div>
-            </div>
-            <div :class="$style.A" :style="{ backgroundImage: `linear-gradient(to right, rgba(${r}, ${g}, ${b}, 0), ${color_})` }">
-                <div :class="$style.H_handle"></div>
-            </div>
+    <u-dragger :disabled="readonly || disabled" :transfer="handleEl" immediate
+        range="offset-parent" range-mode="center"
+        @dragstart="onDragStart($event)"
+        @drag="onDrag($event)">
+        <div :class="$style.sv" :style="{ background: hueColor.toRGB() }">
+            <div ref="handle" :class="$style.handle"></div>
         </div>
+    </u-dragger>
+    <div :class="$style.bar">
+        <div :class="$style.dropper"></div>
+        <div :class="$style.sliders">
+            <u-pallette-slider :min="0" :max="255" :value="color.h" @input="setHue($event)"
+                :style="{ background: `linear-gradient(to right, red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red)` }"
+            ></u-pallette-slider>
+            <u-pallette-slider v-model="color.a" :min="0" :max="1" :step="0.01" :precision="2"
+                :style="{ background: `linear-gradient(to right, ${`rgba(${color.r}, ${color.g}, ${color.b}, 0)` }, ${color.toRGB()})` }"
+            ></u-pallette-slider>
+        </div>
+        <div :class="$style.result" :style="{ backgroundColor: color.toRGBA() }"></div>
+        {{ color.toRGBA() }}
     </div>
-    <input :class="$style.input" :value="color_">
+    <div :class="$style.inputs">
+        <u-label title="Hex"><u-input :class="$style.input" role="hex"></u-input></u-label>
+        <u-label title="R"><u-number-input :class="$style.input" v-model="color.r" :min="0" :max="255"></u-number-input></u-label>
+        <u-label title="G"><u-number-input :class="$style.input" v-model="color.g" :min="0" :max="255"></u-number-input></u-label>
+        <u-label title="B"><u-number-input :class="$style.input" v-model="color.b" :min="0" :max="255"></u-number-input></u-label>
+        <u-label title="A"><u-number-input :class="$style.input" v-model="color.a" :min="0" :max="1" :step="0.1"></u-number-input></u-label>
+    </div>
 </div>

@@ -1,5 +1,9 @@
 @import 'proto-ui.vusion/src/u-slider.vue/module.css';
 
+.root {
+    vertical-align: 2px;
+}
+
 .body {
     margin: 0 6px;
     padding: 4px 0;

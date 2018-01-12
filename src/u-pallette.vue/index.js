@@ -1,34 +1,62 @@
+import { Field } from 'proto-ui.vusion';
+import Color from './Color';
+
 export default {
     name: 'u-pallette',
+    mixins: [Field],
     props: {
-        color: {
-            type: String,
-            default: '#000000',
-        },
+        value: { type: String, default: '#123456' },
+        readonly: { type: Boolean, default: false },
+        disabled: { type: Boolean, default: false },
     },
     data() {
         return {
-            color_: this.color,
-            r: 0,
-            g: 0,
-            b: 0,
-            a: 1,
-            h: 0,
-            s: 0,
-            v: 0,
+            color: Color.parse(this.value),
+            hsvColor: undefined,
+            hueColor: new Color(),
+            grid: { x: 1, y: 1 },
+            handleEl: undefined,
         };
     },
-    watch: {
-        color(color) {
-            this.color_ = color;
+    computed: {
+        hsv() {
+            console.log('hsv');
+            return this.color.getHSV();
         },
-        color_(color) {
-            if (color[0] === '#') {
-                const hex = color.slice(1);
-                this.r = parseInt(hex.slice(0, 2), 16);
-                this.g = parseInt(hex.slice(2, 4), 16);
-                this.b = parseInt(hex.slice(4, 6), 16);
-            }
+        // hueColor() {
+        //     return Color.this.hsv.h
+        // },
+    },
+    watch: {
+        value(value) {
+            this.color = Color.parse(this.value);
+            this.handleEl.style.left = this.hsv.s + '%';
+            this.handleEl.style.top = this.hsv.v + '%';
+        },
+        color: {
+            deep: true,
+            immediate: true,
+            handler(color) {
+                this.hsvColor = this.color.getHSV();
+                this.hueColor.setHSV(this.hsvColor.h, 100, 100);
+            },
+        },
+    },
+    mounted() {
+        // console.log(this.color);
+        this.handleEl = this.$refs.handle;
+        this.handleEl.style.left = this.hsv.s + '%';
+        this.handleEl.style.top = this.hsv.v + '%';
+    },
+    methods: {
+        onDragStart($event) {
+            this.color.setHSV(this.hsv.h, $event.left / $event.range.width * 100, (1 - $event.top / $event.range.height) * 100);
+        },
+        onDrag($event) {
+            this.color.setHSV(this.hsv.h, $event.left / $event.range.width * 100, (1 - $event.top / $event.range.height) * 100);
+        },
+        setHue(hue) {
+            this.color.setHSV(hue, this.hsv.s, this.hsv.v);
         },
     },
 };
