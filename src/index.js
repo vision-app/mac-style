@@ -18,6 +18,7 @@ import NumberInput from './u-number-input.vue';
 import Pallette from './u-pallette.vue';
 import PalletteSlider from './u-pallette-slider.vue';
 import Panel from './u-panel.vue';
+import Popover from './u-popover.vue';
 import Ruler from './u-ruler.vue';
 import Slider from './u-slider.vue';
 import TabView from './u-tab-view.vue';
@@ -47,6 +48,7 @@ export {
     Pallette,
     PalletteSlider,
     Panel,
+    Popover,
     Ruler,
     Slider,
     TabView,
@@ -69,4 +71,5 @@ export {
     GridLayout,
     GridLayoutRow,
     GridLayoutColumn,
+    Popper,
 } from 'proto-ui.vusion';

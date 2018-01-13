@@ -1,8 +1,7 @@
 
-    <!-- <span :class="$style.color" :style="{ backgroundColor: color }"></span> -->
-<div :class="$style.root">
-    <div :class="$style.wrapper">
-        <input type="color" :class="$style.color" :value="color_" @change="onChange">
-    </div>
-    <!-- <span>{{ color_ }}</span> -->
-</div>
+<u-popover trigger="click" content="内容" placement="top-start">
+    <span :class="$style.root">
+        <span :class="$style.color" :style="{ backgroundColor: currentValue }"></span>
+    </span>
+    <u-pallette :class="$style.pallette" slot="body" :value="currentValue" @input="onInput"></u-pallette>
+</u-popover>

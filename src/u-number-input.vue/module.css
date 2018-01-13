@@ -20,6 +20,10 @@
     display: block;
 }
 
+.root[focus] .button {
+    display: none;
+}
+
 .button:hover {
     background: white;
 }

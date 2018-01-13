@@ -5,6 +5,10 @@ class Color {
         this.g = g;
         this.b = b;
         this.a = a;
+
+        // 将hsv也缓存下来好了，省事
+        /* eslint-disable new-cap */
+        Object.assign(this, Color.RGB2HSV(this.r, this.g, this.b));
     }
 
     toArray() {
@@ -21,6 +25,14 @@ class Color {
         return '#' + fix(this.r.toString(16)) + fix(this.g.toString(16)) + fix(this.b.toString(16));
     }
 
+    getRGB() {
+        return { r: this.r, g: this.g, b: this.b };
+    }
+
+    setRGB(r, g, b) {
+        Object.assign(this, { r, g, b }, Color.RGB2HSV(r, g, b));
+    }
+
     toRGB() {
         return `rgb(${this.r}, ${this.g}, ${this.b})`;
     }
@@ -31,19 +43,21 @@ class Color {
 
     getHSV() {
         /* eslint-disable new-cap */
-        return Color.RGB2HSV(this.r, this.g, this.b);
+        // return Color.RGB2HSV(this.r, this.g, this.b);
+        return { h: this.h, s: this.s, v: this.v };
     }
 
     // toHSV()
     // CSS不支持，先不做了。其实就两句话的事
+
     setHSV(h, s, v) {
-        Object.assign(this, Color.HSV2RGB(h, s, v));
+        Object.assign(this, { h, s, v }, Color.HSV2RGB(h, s, v));
     }
 
     getHSL() {
         /* eslint-disable new-cap */
-        const hsv = Color.RGB2HSV(this.r, this.g, this.b);
-        return Color.HSV2HSL(hsv.h, hsv.s, hsv.v);
+        // const hsv = Color.RGB2HSV(this.r, this.g, this.b);
+        return Color.HSV2HSL(this.h, this.s, this.v);
     }
 
     setHSL(h, s, l) {
@@ -96,10 +110,10 @@ class Color {
 
     static parse(value) {
         value = value.trim();
-        return Color['from' + this.checkType(value)](value);
+        return Color['from' + this.checkFormat(value)](value);
     }
 
-    static checkType(value) {
+    static checkFormat(value) {
         if (value[0] === '#')
             return 'HEX';
         else if (value.startsWith('rgba('))
@@ -190,8 +204,27 @@ class Color {
     static HSV2HSL(h, s, v) {
         return {
             h,
-            s: (s * v / ((h = (2 - s) * v) < 1 ? h : 2 - h)) || 0,
-            l: h / 2,
+            s: (s * v / ((h = (2 - s) * v) < 1 ? h : 2 - h)) >> 0 || 0,
+            l: h / 2 >> 0,
+        };
+    }
+
+    static HSL2HSV(h, s, l) {
+        s = s / 100;
+        l = l / 100;
+        let smin = s;
+        const lmin = Math.max(l, 0.01);
+
+        l *= 2;
+        s *= (l <= 1) ? l : 2 - l;
+        smin *= lmin <= 1 ? lmin : 2 - lmin;
+        const v = (l + s) / 2;
+        const sv = l === 0 ? (2 * smin) / (lmin + smin) : (2 * s) / (l + s);
+
+        return {
+            h,
+            s: sv * 100 >> 0,
+            v: v * 100 >> 0,
         };
     }
 }
