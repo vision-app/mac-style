@@ -1,6 +1,6 @@
 @import 'proto-ui.vusion/src/base/revusion.css';
 
 body {
-    font: 12px/20px 'PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
+    font: 12px/1.6666 'PingFang SC','Hiragino Sans GB','Microsoft YaHei','WenQuanYi Micro Hei',sans-serif;
     color: $color-base;
 }

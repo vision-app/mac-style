@@ -1,0 +1,6 @@
+<div :class="$style.root">
+    <span :class="$style.label" v-if="label">{{ label }}</span>
+    <span :class="$style.field">
+        <slot></slot>
+    </span>
+</div>

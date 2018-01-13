@@ -1,0 +1,28 @@
+.root {
+}
+
+.root:last-child {
+    border-bottom: none;
+}
+
+.head {
+    font-size: 12px;
+    color: #777;
+    line-height: 1;
+    padding: 6px 8px;
+    background: $background-color-base;
+}
+
+.extra {
+    float: right;
+    margin-top: -4px;
+    margin-right: -4px;
+}
+
+.body {
+    padding: 8px;
+}
+
+.foot {
+
+}

@@ -1,8 +1,9 @@
 .root {
+    position: relative;
     display: inline-block;
     border: 1px solid $border-color-base;
     border-radius: 3px;
-    vertical-align: -6px;
+    vertical-align: -7px;
 }
 
 .color {

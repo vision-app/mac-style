@@ -11,6 +11,7 @@
 
 .track {
     height: 4px;
+    background: $gray-light;
     border-radius: 100px;
     overflow: hidden;
 }

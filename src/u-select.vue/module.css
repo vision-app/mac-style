@@ -1,0 +1,13 @@
+.root {
+    width: $width-base;
+    height: $height-base;
+    vertical-align: middle;
+    margin-bottom: 1px;
+    background: white;
+    border-color: $border-color-base;
+}
+
+.root:focus {
+    outline: $focus-outline;
+    border-color: $brand-primary;
+}

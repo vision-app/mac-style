@@ -45,6 +45,7 @@
 .body {
     /* flex: auto; */
     overflow: auto;
+    background: white;
     border-bottom: 1px solid $border-color-base;
 }
 

@@ -1,5 +1,5 @@
 export default {
-    name: 'u-panel',
+    name: 'u-pane',
     props: {
         title: String,
     },

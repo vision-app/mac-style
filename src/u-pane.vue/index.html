@@ -1,0 +1,14 @@
+<div :class="$style.root">
+    <div :class="$style.head" v-if="title">
+        <slot name="head">
+            <span :class="$style.title">{{ title }}</span>
+            <span :class="$style.extra"><slot name="extra"></slot></span>
+        </slot>
+    </div>
+    <div :class="$style.body">
+        <slot></slot>
+    </div>
+    <div :class="$style.foot">
+        <slot name="foot"></slot>
+    </div>
+</div>

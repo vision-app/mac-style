@@ -17,9 +17,12 @@ import ListViewItem from './u-list-view-item.vue';
 import NumberInput from './u-number-input.vue';
 import Pallette from './u-pallette.vue';
 import PalletteSlider from './u-pallette-slider.vue';
-import Panel from './u-panel.vue';
+import Pane from './u-pane.vue';
+import PaneItem from './u-pane-item.vue';
 import Popover from './u-popover.vue';
 import Ruler from './u-ruler.vue';
+import Select from './u-select.vue';
+import SelectItem from './u-select-item.vue';
 import Slider from './u-slider.vue';
 import TabView from './u-tab-view.vue';
 import TabViewItem from './u-tab-view-item.vue';
@@ -47,9 +50,12 @@ export {
     NumberInput,
     Pallette,
     PalletteSlider,
-    Panel,
+    Pane,
+    PaneItem,
     Popover,
     Ruler,
+    Select,
+    SelectItem,
     Slider,
     TabView,
     TabViewItem,
