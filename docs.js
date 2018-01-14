@@ -27794,7 +27794,6 @@ Object(vusion_utils["installComponents"])(Components, vue_esm["a" /* default */]
 new vue_esm["a" /* default */]({
     router: new vue_router_esm({
         base: window.base,
-        mode: 'history',
         routes: routes,
         scrollBehavior: (to, from, savedPosition) => savedPosition || { x: 0, y: 0 },
     }),
