@@ -17,7 +17,7 @@
                 :style="{ background: `linear-gradient(to right, ${`rgba(${color.r}, ${color.g}, ${color.b}, 0)` }, ${color.toRGB()})` }"
             ></u-pallette-slider>
         </div>
-        <div :class="$style.result" :style="{ backgroundColor: color.toRGBA() }"></div>
+        <div :class="$style.color" :style="{ backgroundColor: color.toRGBA() }"></div>
     </div>
     <div :class="$style.inputs">
         <u-label title="Hex"><u-input :class="$style.input" role="hex" :value="color.toHEX()" @input="setHEX($event), onInput()"></u-input></u-label>

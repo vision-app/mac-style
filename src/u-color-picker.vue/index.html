@@ -3,5 +3,7 @@
     <span :class="$style.root">
         <span :class="$style.color" :style="{ backgroundColor: currentValue }"></span>
     </span>
-    <u-pallette :class="$style.pallette" slot="body" :value="currentValue" @input="onInput"></u-pallette>
+    <u-pallette :class="$style.pallette" slot="body" :value="currentValue" @input="onInput">
+        <slot></slot>
+    </u-pallette>
 </u-popover>
