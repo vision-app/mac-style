@@ -1,7 +1,6 @@
 $triangle-size: 10px;
 
 .body {
-    /* top: $triangle-size !important; */
     z-index: 1050;
     display: inline-block;
     background: white;
