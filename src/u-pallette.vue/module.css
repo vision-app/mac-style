@@ -100,7 +100,7 @@ $sv_button-size: 10px;
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: url('../u-pallette.vue/assets/transparent.png');
+    background: url('./assets/transparent.png');
 }
 
 .input[class] {

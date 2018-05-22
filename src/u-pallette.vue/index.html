@@ -13,7 +13,7 @@
             <u-pallette-slider :min="0" :max="360" :value="color.h" @input="setHue($event), onInput()"
                 :style="{ background: `linear-gradient(to right, red 0,#ff0 17%,#0f0 33%,#0ff 50%,#00f 67%,#f0f 83%,red)` }"
             ></u-pallette-slider>
-            <u-pallette-slider :min="0" :max="1" :step="0.01" :fixed="2" v-model="color.a" @input="onInput()"
+            <u-pallette-slider :min="0" :max="1" :step="0.01" :precision="0.01" v-model="color.a" @input="onInput()"
                 :style="{ background: `linear-gradient(to right, ${`rgba(${color.r}, ${color.g}, ${color.b}, 0)` }, ${color.toRGB()})` }"
             ></u-pallette-slider>
         </div>
@@ -37,7 +37,7 @@
             ></u-number-input>
         </u-label>
         <u-label title="A">
-            <u-number-input :class="$style.input" :min="0" :max="1" :step="0.1" v-model="color.a" @input="onInput()"></u-number-input>
+            <u-number-input :class="$style.input" :min="0" :max="1" :step="0.1" :precision="0.01" v-model="color.a" @input="onInput()"></u-number-input>
         </u-label>
     </div>
 </div>
